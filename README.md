@@ -51,36 +51,6 @@
 ```plaintext
 app/
 │
-├── main.py             # FastAPI 애플리케이션 실행의 진입점
-│
-├── core/               # 설정 및 애플리케이션 수명 주기 이벤트 처리
-│   ├── config.py       # 설정 파일 (환경 변수, 데이터베이스 URL 등)
-│   └── startup.py      # 애플리케이션 lifespan 이벤트 핸들러
-│
-├── db/                 # 데이터베이스 관련 설정과 모델 정의
-│   ├── database.py     # 데이터베이스 연결 설정 및 관리
-│   └── models.py       # SQLAlchemy로 데이터베이스 테이블 정의
-│
-├── models/             # Pydantic 데이터 모델 정의 (요청/응답)
-│   ├── user.py         # 사용자 데이터 모델 (요청 및 응답 데이터 유효성 검사)
-│   └── response.py     # 공통 응답 데이터 모델 정의
-│
-├── routers/            # API 라우트 정의, 기능별로 분리하여 관리
-│   ├── database_api.py # 데이터베이스 관련 API 라우트 정의
-│   ├── user_api.py     # 사용자 관련 API 라우트 정의
-│   └── test_api.py     # API 테스트용 라우트 정의
-│    
-└── services/           # 서비스 로직, 비즈니스 로직을 관리
-    ├── database_service.py # 데이터베이스 관련 서비스 (초기화 및 상태 확인)
-    └── user_service.py     # 사용자 데이터베이스 서비스 (추가 및 조회)
-
----
-
-### 📂 프로젝트 구조
-
-```plaintext
-app/
-│
 ├── .env               # 환경 변수 파일 
 |
 ├── main.py             # FastAPI 애플리케이션 실행의 진입점
